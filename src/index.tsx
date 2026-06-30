@@ -1,3 +1,10 @@
+
+// Vazifasi: Dasturning ENG BIRINCHI ishga tushadigan fayli
+// React ni HTML ga ulaydi(root div)
+// Barcha wrapper larni o'raydi
+
+
+
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -7,14 +14,18 @@ import reportWebVitals from "./reportWebVitals";
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from "./app/MaterialTheme";
+import { BrowserRouter as Router, } from "react-router-dom";
 import "./css/index.css";
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <App />
+        <Router>
+          <App />
+        </Router>
       </ThemeProvider>
     </Provider>
   </React.StrictMode>,
@@ -25,3 +36,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+

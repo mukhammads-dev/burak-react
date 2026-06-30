@@ -1,3 +1,9 @@
+/*
+Vazifasi: 
+Redux — butun loyihaning umumiy xotirasi
+Hozir bo'sh (reducer: {})
+Keyinroq: productSlice, memberSlice, orderSlice kiradi
+*/
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 
 export const store = configureStore({

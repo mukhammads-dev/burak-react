@@ -1,3 +1,8 @@
+/*Vazifasi: Butun loyiha ranglari va sozlamalari
+		  primary  → #343434 (qora)
+		  secondary → #d7b586 (oltin)
+		  Bir joyda o'zgartir → hamma yerda o'zgaradi
+*/
 import { createTheme } from '@mui/material/styles';
 import { common } from '@mui/material/colors';
 import shadow from './shadow';
