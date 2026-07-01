@@ -1,4 +1,4 @@
 export function OtherNavbar() {
-    return <div>Other Navbar</div>;
+    return <div>OtherNavbar</div>;
 
 }
