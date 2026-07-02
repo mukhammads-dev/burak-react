@@ -53,6 +53,7 @@ const light = {
 };
 
 // A custom theme for this app
+// Hamma displayga mos kelishi uchun 1300px tanlangan
 let theme = createTheme(light);
 theme = createTheme(theme, {
 	components: {

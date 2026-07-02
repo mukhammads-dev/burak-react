@@ -1,12 +1,5 @@
-
-// Vazifasi: Dasturning ENG BIRINCHI ishga tushadigan fayli
-// React ni HTML ga ulaydi(root div)
-// Barcha wrapper larni o'raydi
-
-
-
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import App from "./app/App";
@@ -17,19 +10,21 @@ import theme from "./app/MaterialTheme";
 import { BrowserRouter as Router, } from "react-router-dom";
 import "./css/index.css";
 
+// Global Integrations here
+const container = document.getElementById('root')!;
+const root = createRoot(container);
 
-ReactDOM.render(
+root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Router>
-          <App />
+    <Provider store={store}>     {/* Redux Parent*/}
+      <ThemeProvider theme={theme}>     {/* MUI Parent */}
+        <CssBaseline />  {/* Child css brauzerlar aro tafovutni olib beradi */}
+        <Router>     {/* Router Parent*/}
+          <App />  {/* App Child */}
         </Router>
       </ThemeProvider>
     </Provider>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

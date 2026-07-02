@@ -5,7 +5,7 @@ export function HomeNavbar() {
     const authMember = null;
 
     return (
-        <div className="home-navbar">
+        <div className="home-navbar"> {/* 1 div toliq maydondi egallaydi 2 css ximoya */}
             <Container sx={{ mt: "55px", height: "642px" }}>
                 <Stack
                     direction="row"
