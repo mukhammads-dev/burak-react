@@ -10,7 +10,7 @@ import theme from "./app/MaterialTheme";
 import { BrowserRouter as Router, } from "react-router-dom";
 import "./css/index.css";
 
-// Global Integrations here
+// Global Integrations => butun loyohada ishliydigon global integrations 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 

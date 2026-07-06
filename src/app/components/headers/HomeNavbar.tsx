@@ -6,7 +6,7 @@ export default function HomeNavbar() {
     const authMember = null;
 
     return (
-        <div className="home-navbar"> {/* 1 div toliq maydondi egallaydi 2 css ximoya */}
+        <div className="home-navbar">
             <Container className="navbar-container">
                 <Stack className="menu">
                     <Box>
@@ -22,13 +22,11 @@ export default function HomeNavbar() {
                         <Box className={"hover-line"}>
                             <NavLink to="/products" activeClassName={"underline"}>Products</NavLink>
                         </Box>
-
                         {authMember ? (
                             <Box className={"hover-line"}>
                                 <NavLink to="/orders" activeClassName={"underline"}>Orders</NavLink>
                             </Box>
                         ) : null}
-
                         {authMember ? (
                             <Box className={"hover-line"}>
                                 <NavLink to="/member-page" activeClassName={"underline"}>My Page</NavLink>
@@ -42,7 +40,7 @@ export default function HomeNavbar() {
                         {/* BASKET */}
                         <Basket />
 
-                        {!authMember ? ( // Auth member bolmasa korinadi
+                        {!authMember ? (
                             <Box>
                                 <Button variant="contained" className="login-button">Login</Button>
                             </Box>

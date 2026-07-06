@@ -1999,7 +1999,7 @@
   dependencies:
     "@babel/runtime" "^7.23.9"
 
-"@mui/joy@^5.0.0-beta.52":
+"@mui/joy@^5.0.0-beta.24":
   version "5.0.0-beta.52"
   resolved "https://registry.yarnpkg.com/@mui/joy/-/joy-5.0.0-beta.52.tgz#9c7cd9629603089c80e8f8f7b78a41534ef06e91"
   integrity sha512-e8jQanA5M1f/X52mJrw0UIW8Er7EAHuLuigmGFw7yIsAgIluhIP4rZ7JcbVrUi6z5Gk0weC9QWUUtjLejAbO8g==
@@ -2807,7 +2807,7 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.3.tgz#6209321eb2c1712a7e7466422b8cb1fc0d9dd5d8"
   integrity sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==
 
-"@types/styled-components@^5.1.36":
+"@types/styled-components@^5.1.34":
   version "5.1.36"
   resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.36.tgz#d63db8ad9005afc82f173012036c4c101dc93d57"
   integrity sha512-pGMRNY5G2rNDKEv2DOiFYa7Ft1r0jrhmgBwHhOMzPTgCjO76bCot0/4uEfqj7K0Jf1KdQmDtAuaDk9EAs9foSw==

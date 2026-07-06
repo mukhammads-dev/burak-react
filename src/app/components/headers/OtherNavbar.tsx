@@ -5,7 +5,7 @@ import Basket from "./Basket";
 
 export default function OtherNavbar() {
     const authMember = null
-    return <div className="other-navbar"> {/* 1 div toliq maydondi egallaydi 2 css ximoya */}
+    return <div className="other-navbar">
         <Container className="navbar-container">
             <Stack className="menu">
                 <Box>
@@ -41,7 +41,7 @@ export default function OtherNavbar() {
                     {/* BASKET */}
                     <Basket />
 
-                    {!authMember ? ( // Auth member bolmasa korinadi
+                    {!authMember ? (
                         <Box>
                             <Button variant="contained" className="login-button">Login</Button>
                         </Box>

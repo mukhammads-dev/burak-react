@@ -1,0 +1,445 @@
+.products-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #f7f7fb;
+}
+
+.products {
+    width: 100%;
+    padding: 48px 0 0;
+}
+
+.products .avatar-big-box {
+    width: 100%;
+    min-height: 220px;
+    padding: 48px;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 8px;
+    background: #161a22;
+}
+
+.products .top-text {
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.products .top-text p {
+    margin: 0;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.products .single-search-big-box {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.products .single-search-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0 18px;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+}
+
+.products .single-button-search {
+    min-width: 132px;
+    border-radius: 0;
+    text-transform: capitalize;
+}
+
+.products .dishes-filter-section,
+.products .list-category-section,
+.products .pagination-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.products .dishes-filter-section {
+    margin-top: 34px;
+}
+
+.products .dishes-filter-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.products .order {
+    min-width: 96px;
+    text-transform: capitalize;
+}
+
+.products .list-category-section {
+    margin-top: 28px;
+    flex-direction: column;
+}
+
+.products .product-category {
+    width: 100%;
+}
+
+.products .category-main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.products .category-main button {
+    min-width: 102px;
+    text-transform: capitalize;
+}
+
+.products .product-wrapper {
+    margin-top: 34px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.products .product-card {
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 10px 26px rgba(20, 24, 36, 0.08);
+    cursor: pointer;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.products .product-card:hover,
+.products .product-card:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 34px rgba(20, 24, 36, 0.14);
+    outline: none;
+}
+
+.products .product-img {
+    position: relative;
+    min-height: 230px;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.products .product-sale {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #111827;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.products .shop-btn,
+.products .view-btn {
+    position: absolute;
+    bottom: 14px;
+    min-width: 42px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+.products .shop-btn {
+    right: 86px;
+}
+
+.products .view-btn {
+    right: 36px;
+}
+
+.products .shop-btn img {
+    width: 22px;
+    height: 22px;
+}
+
+.products .product-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.products .product-card > .product-desc {
+    padding: 18px;
+}
+
+.products .product-title {
+    color: #101828;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.products .product-card .product-desc .product-desc {
+    color: #d84315;
+    font-weight: 700;
+}
+
+.products .no-data {
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    color: #667085;
+}
+
+.products .pagination-section {
+    margin: 36px 0 56px;
+    justify-content: center;
+}
+
+.products .brands-logo {
+    width: 100%;
+    padding: 54px 0;
+    background: #111827;
+}
+
+.products .family-brands {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.products .category-title,
+.chosen-product .title {
+    color: #101828;
+    font-family: "Poppins", sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.products .brands-logo .category-title {
+    color: #ffffff;
+}
+
+.products .brand-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.products .review-box {
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.products .review-box img {
+    width: 108px;
+    height: 108px;
+    object-fit: contain;
+}
+
+.products .address {
+    width: 100%;
+    padding: 56px 0 72px;
+    background: #ffffff;
+}
+
+.products .address-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products .address iframe {
+    width: 100%;
+    max-width: 1320px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.chosen-product {
+    width: 100%;
+    padding: 48px 0 78px;
+}
+
+.chosen-product .title {
+    width: 100%;
+    margin-bottom: 34px;
+    text-align: center;
+}
+
+.chosen-product .product-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+    gap: 34px;
+    align-items: start;
+}
+
+.chosen-product .chosen-product-slider,
+.chosen-product .chosen-product-info {
+    min-width: 0;
+}
+
+.chosen-product .swiper-area {
+    width: 100%;
+    height: 520px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.chosen-product .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.chosen-product .info-box {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 12px 32px rgba(20, 24, 36, 0.1);
+}
+
+.chosen-product .product-name {
+    color: #101828;
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.chosen-product .resto-name {
+    color: #667085;
+    font-size: 16px;
+}
+
+.chosen-product .rating-box,
+.chosen-product .evaluation-box,
+.chosen-product .product-view,
+.chosen-product .product-price,
+.chosen-product .button-box {
+    display: flex;
+    align-items: center;
+}
+
+.chosen-product .rating-box {
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.chosen-product .product-view {
+    color: #667085;
+}
+
+.chosen-product .product-desc {
+    margin: 14px 0;
+    color: #475467;
+    line-height: 1.7;
+}
+
+.chosen-product .product-price {
+    justify-content: space-between;
+    color: #101828;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.chosen-product .button-box {
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.chosen-product .button-box button {
+    min-width: 170px;
+    height: 46px;
+    text-transform: capitalize;
+}
+
+@media (max-width: 1024px) {
+    .products .product-wrapper,
+    .products .brand-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .chosen-product .product-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .products {
+        padding-top: 24px;
+    }
+
+    .products .avatar-big-box {
+        padding: 28px 20px;
+    }
+
+    .products .top-text p {
+        font-size: 30px;
+    }
+
+    .products .single-search-big-box {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .products .single-search-input {
+        height: 48px;
+    }
+
+    .products .single-button-search {
+        height: 46px;
+    }
+
+    .products .dishes-filter-box {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .products .product-wrapper,
+    .products .brand-list {
+        grid-template-columns: 1fr;
+    }
+
+    .chosen-product .swiper-area {
+        height: 340px;
+    }
+
+    .chosen-product .info-box {
+        padding: 22px;
+    }
+}
