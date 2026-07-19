@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components'; // css in js
 
 export interface IDividerProps {
 	width?: string;

@@ -20,7 +20,7 @@ root.render(
       <ThemeProvider theme={theme}>     {/* MUI Parent */}
         <CssBaseline />  {/* Child css brauzerlar aro tafovutni olib beradi */}
         <Router>     {/* Router Parent*/}
-          <App />  {/* App Child */}
+          <App />  {/* App Child self closed bolgan chunki buni ichiga hec narsa yozmaymiz */}
         </Router>
       </ThemeProvider>
     </Provider>
