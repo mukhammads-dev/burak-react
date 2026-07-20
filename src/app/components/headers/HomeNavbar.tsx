@@ -11,6 +11,10 @@ export default function HomeNavbar() {
     useEffect(() => {
         console.log("componentDidMount"); // Data Fetch
         setCount(count + 1);
+
+        return () => {
+            console.log("componentWillUnmount");
+        };
     }, [value]);
 
     /** HANDLERS */
