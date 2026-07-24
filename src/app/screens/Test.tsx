@@ -17,7 +17,6 @@ class Test extends React.Component {
             brand: "Tesla",
             model: "Model S",
             year: 2023,
-
         });
     }
     // Lifesycle methods => Retrieve data from backend

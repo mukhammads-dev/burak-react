@@ -5,9 +5,13 @@ Hozir bo'sh (reducer: {})
 Keyinroq: productSlice, memberSlice, orderSlice kiradi
 */
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import homePage from "./screens/homePage";
+import HomePageReducer from "./screens/homePage/slice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    homePage: HomePageReducer
+  },
 });
 
 export type AppDispatch = typeof store.dispatch;
