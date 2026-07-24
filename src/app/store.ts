@@ -7,8 +7,13 @@ Keyinroq: productSlice, memberSlice, orderSlice kiradi
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import homePage from "./screens/homePage";
 import HomePageReducer from "./screens/homePage/slice";
+import reduxLogger from "redux-logger";
+import { curryGetDefaultMiddleware } from "@reduxjs/toolkit/dist/getDefaultMiddleware";
 
 export const store = configureStore({
+  middleware: (getDefaultMiddleware) =>
+    // @ts-ignore
+    getDefaultMiddleware().concat(reduxLogger),
   reducer: {
     homePage: HomePageReducer
   },
