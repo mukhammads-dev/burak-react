@@ -13,24 +13,33 @@ import { createSelector } from "reselect"
 import { setPopularDishes } from "./slice";
 import { retrievePopularDishes } from "./selector";
 import { Product } from "../../../lib/types/product";
+import ProductService from "../../services/Productservice";
+import { ProductCollection } from "../../../lib/enums/product.enum";
 
 /** REDUX SLICE & SELECTOR */
 const actionDispatch = (dispatch: Dispatch) => ({
     setPopularDishes: (data: Product[]) => dispatch(setPopularDishes(data))
 });
 
-const popularDishesRetriever = createSelector(
-    retrievePopularDishes,
-    (popularDishes) => ({ popularDishes })
-);
-
 export default function HomePage() {
     const { setPopularDishes } = actionDispatch(useDispatch()); // slice datani borib joylaydi
-    const { popularDishes } = useSelector(popularDishesRetriever) // selector datani oqiydi
 
-    console.log(process.env.REACT_APP_API_URL)
+    useEffect(() => {
+        // Backend Server data fetch 
+        const product = new ProductService();
+        product.getProducts({
+            page: 1,
+            limit: 4,
+            order: "productViews",
+            productCollection: ProductCollection.DISH,
+        }).then(data => {
+            console.log("data passed here:", data)
+            setPopularDishes(data);
+        }).catch(err => console.log(err));
 
-    useEffect(() => { }, []);
+    }, []);
+
+
 
 
     return (
