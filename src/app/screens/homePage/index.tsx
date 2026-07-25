@@ -25,10 +25,10 @@ const popularDishesRetriever = createSelector(
 );
 
 export default function HomePage() {
-    const { setPopularDishes } = actionDispatch(useDispatch());
-    const { popularDishes } = useSelector(popularDishesRetriever)
+    const { setPopularDishes } = actionDispatch(useDispatch()); // slice datani borib joylaydi
+    const { popularDishes } = useSelector(popularDishesRetriever) // selector datani oqiydi
 
-    // Selector: Store => Data
+    console.log(process.env.REACT_APP_API_URL)
 
     useEffect(() => { }, []);
 

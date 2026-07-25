@@ -1,4 +1,7 @@
-import { createSelector } from "reselect";
+
+// SELECTORLAR datani lyuboy joyda call qilish uchun yordamga keladi
+
+import { createSelector } from "reselect"; // bu malumotni olish uchun
 import { AppRootState } from "../../../lib/types/screen";
 
 const selectHomePage = (state: AppRootState) => state.homePage;
