@@ -10,6 +10,25 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useHistory } from "react-router-dom";
 
+import { useDispatch } from "react-redux";
+import { Dispatch } from "@reduxjs/toolkit";
+import { setProducts } from "./slice";
+import { Product } from "../../../lib/types/product";
+
+
+
+
+/** REDUX SLICE & SELECTOR */
+const actionDispatch = (dispatch: Dispatch) => ({
+    setProducts: (data: Product[]) => dispatch(setProducts(data)),
+});
+
+const popularDishesRetriever = createSelector(
+    retrievePopularDishes,
+    (popularDishes) => ({ popularDishes })
+);
+
+
 export const products = [
     { productId: "cutlet", productName: "Cutlet", imagePath: "/img/cutlet.webp" },
     { productId: "kebab-fresh", productName: "Kebab", imagePath: "/img/kebab-fresh.webp" },
