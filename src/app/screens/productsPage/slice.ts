@@ -1,23 +1,21 @@
-// SLICE jarayoni backend datani store Reduxga joylash 
-
 import { createSlice } from "@reduxjs/toolkit";
-import { HomePageState, ProductsPageState } from "../../../lib/types/screen";
+import { ProductsPageState } from "../../../lib/types/screen";
 
-const initialState: ProductsPageState = { // REDUCER 
-    restaurant: null, // backendan data yoq bolsa 
-    chosenProduct: null,     // Reducer uchun initial state bolishi kerak
-    products: []   // qandaydur malumot app crash bolmasligi uchun
+
+const initialState: ProductsPageState = {
+    restaurant: null,
+    chosenProduct: null,
+    products: [],
 };
 
 const productsPageSlice = createSlice({
     name: "productsPage",
-    initialState, // backendan data kelguncha boshlangich statelar shular
-
-    reducers: {  // SLICE eng katta qismi REDUCER lar =>
+    initialState,
+    reducers: {
         setRestaurant: (state, action) => {
-            state.restaurant = action.payload; // unga malumotni ACTION payload qismida olib keladi
-        },                                        // va reducer stateni yangilaydi
-        setchosenProduct: (state, action) => {
+            state.restaurant = action.payload;
+        },
+        setChosenProduct: (state, action) => {
             state.chosenProduct = action.payload;
         },
         setProducts: (state, action) => {
@@ -26,10 +24,8 @@ const productsPageSlice = createSlice({
     },
 });
 
-// Reducer ga data olib kelgan Actiondi tashqariga export qilamiz
-export const { setRestaurant, setchosenProduct, setProducts } =
-    productsPageSlice.actions;
 
-// va REDUX ga qoshish uchun bu yordamga keladi
+export const { setRestaurant, setChosenProduct, setProducts } = productsPageSlice.actions;
+
 const ProductsPageReducer = productsPageSlice.reducer;
-export default ProductsPageReducer
+export default ProductsPageReducer;
