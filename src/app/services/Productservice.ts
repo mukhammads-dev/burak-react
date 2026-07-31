@@ -27,7 +27,7 @@ class ProductService {
 
     public async getProduct(productId: string): Promise<Product> {
         try {
-            const url = `${this.path}/product/${productId}`;
+            const url = `${this.path}/product/${productId}`; // true → cookie (JWT token) ham yuboradi
             const result = await axios.get(url, { withCredentials: true }); //server aynan kim request qilyatkanligi haqida ma'lumotga ega bo'lishi => true  
             console.log("getProduct: ", result);
 
