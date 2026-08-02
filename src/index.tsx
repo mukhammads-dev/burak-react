@@ -9,6 +9,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from "./app/MaterialTheme";
 import { BrowserRouter as Router, } from "react-router-dom";
 import "./css/index.css";
+import ContextProvider from "./app/contex/ContexProvider";
 
 // Global Integrations => butun loyohada ishliydigon global integrations 
 const container = document.getElementById('root')!;
@@ -16,13 +17,15 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <Provider store={store}>     {/* Redux Parent*/}
-      <ThemeProvider theme={theme}>     {/* MUI Parent */}
-        <CssBaseline />  {/* Child css brauzerlar aro tafovutni olib beradi */}
-        <Router>     {/* Router Parent*/}
-          <App />  {/* App Child self closed bolgan chunki buni ichiga hec narsa yozmaymiz */}
-        </Router>
-      </ThemeProvider>
+    <Provider store={store}>
+      <ContextProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Router>
+            <App />
+          </Router>
+        </ThemeProvider>
+      </ContextProvider>
     </Provider>
   </React.StrictMode>
 );
