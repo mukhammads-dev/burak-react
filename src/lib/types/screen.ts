@@ -1,4 +1,5 @@
 import { Member } from "./member";
+import { Order } from "./order";
 import { Product } from "./product";
 
 // Redux qurish type integratsiyadan boshlanadi
@@ -9,6 +10,7 @@ import { Product } from "./product";
 export interface AppRootState { // bizni butun Applicationimiz =>
     homePage: HomePageState; // Homepagedan iborat
     productsPage: ProductsPageState;
+    ordersPage: OrdersPageState;
     // ordersPage:  // Orders pagedan iborat...
 }
 /** HOMEPAGE */
@@ -31,3 +33,8 @@ export interface ProductsPageState {
 
 
 /** ORDERS PAGE */
+export interface OrdersPageState {
+    pausedOrders: Order[];
+    processOrders: Order[];
+    finishedOrders: Order[];
+}

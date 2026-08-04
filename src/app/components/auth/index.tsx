@@ -102,6 +102,7 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
 
   const handleLoginRequest = async () => {
     try {
+      // malumotlar hammasi kiritilganmi tekshiramiz
       const isFulfill = memberNick !== "" && memberPassword !== "";
       if (!isFulfill) throw new Error(Messages.error3);
 

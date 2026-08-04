@@ -10,6 +10,7 @@ import HomePageReducer from "./screens/homePage/slice";
 import reduxLogger from "redux-logger";
 import { curryGetDefaultMiddleware } from "@reduxjs/toolkit/dist/getDefaultMiddleware";
 import ProductsPageReducer from "./screens/productsPage/slice";
+import OrdersPageReducer from "./screens/ordersPage/slice";
 
 export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
@@ -18,7 +19,7 @@ export const store = configureStore({
   reducer: {
     homePage: HomePageReducer,
     productsPage: ProductsPageReducer,
-
+    ordersPage: OrdersPageReducer,
   },
 });
 
