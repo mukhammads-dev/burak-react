@@ -12,12 +12,12 @@ export const retrievePausedOrders = createSelector(
 );
 
 
-export const retrieveNewDishes = createSelector(
+export const retrieveProcessOrders = createSelector(
     selectOrdersPage,
     (OrdersPage) => OrdersPage.processOrders
 );
 
-export const retrieveTopUsers = createSelector(
+export const retrieveFinishedOrders = createSelector(
     selectOrdersPage,
     (OrdersPage) => OrdersPage.finishedOrders
 ); 
