@@ -13,7 +13,7 @@ interface HomeNavbarProps {
     onAdd: (item: CartItem) => void;
     onRemove: (item: CartItem) => void;
     onDelete: (item: CartItem) => void;
-    onDeleteAll: (item: CartItem) => void;
+    onDeleteAll: () => void;
     setSignupOpen: (isOpen: boolean) => void;
     setLoginOpen: (isOpen: boolean) => void;
     handleLogoutClick: (e: React.MouseEvent<HTMLElement>) => void;
