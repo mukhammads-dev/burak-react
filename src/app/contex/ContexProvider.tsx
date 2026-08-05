@@ -6,6 +6,8 @@ import { Member } from "../../lib/types/member";
 interface GlobalInterface {
     authMember: Member | null;
     setAuthMember: (member: Member | null) => void;
+    orderBuilder: Date;
+    setOrderBuilder: (input: Date) => void;
 }
 
 // Step1: Global contex => hosil qildik createContext orqali
@@ -18,17 +20,19 @@ const ContextProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const cookies = new Cookies();
     if (!cookies.get("accessToken")) localStorage.removeItem("memberData");
 
-    // auth member malumotni shakillantiramiz
+    // auth member mantiqini shakillantiramiz
     const [authMember, setAuthMember] = useState<Member | null>(
         localStorage.getItem("memberData")
             ? JSON.parse(localStorage.getItem("memberData") as string)
             : null
     );
+    // Order rebuild mantiqini shakillantiramz
+    const [orderBuilder, setOrderBuilder] = useState<Date>(new Date());
     console.log("=== verify ===");
 
     // Step2: va shu contexga malumot joylashtirdik uni parent qildik
     return (
-        <GlobalContext.Provider value={{ authMember, setAuthMember }}>
+        <GlobalContext.Provider value={{ authMember, setAuthMember, orderBuilder, setOrderBuilder }}>
             {children}
         </GlobalContext.Provider>
     );

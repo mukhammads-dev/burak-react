@@ -26,7 +26,7 @@ import { useGlobals } from "./hooks/useGlobals";
 function App() {
   const location = useLocation();
   const { setAuthMember } = useGlobals();
-  // useBaket call: destraction qilib ichidagi malumotlarni olamiz
+  // useBaket call: destraction
   const { cartItems, onAdd, onRemove, onDelete, onDeleteAll } = useBasket();
   const [signupOpen, setSignupOpen] = useState<boolean>(false);
   const [loginOpen, setLoginOpen] = useState<boolean>(false);
