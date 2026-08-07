@@ -27,7 +27,7 @@ interface PausedOrdersProps {
 export default function PausedOrders(props: PausedOrdersProps) {
     const { setValue } = props;
     const { authMember, setOrderBuilder } = useGlobals();
-    const { pausedOrders } = useSelector(pausedOrdersRetriever);
+    const { pausedOrders } = useSelector(pausedOrdersRetriever); // Selector
 
     /** HANDLERS **/
 
@@ -79,7 +79,6 @@ export default function PausedOrders(props: PausedOrdersProps) {
     };
 
 
-    //,,,
 
     return (
         <TabPanel value={"1"}>
